@@ -1,0 +1,56 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.Plant_Petals_Glitch.name",
+    "Description": "server.items.Plant_Petals_Glitch.description"
+  },
+  "Icon": "Icons/ItemsGenerated/Plant_Petals_Pink.png",
+  "IconProperties": {
+    "Scale": 0.8,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      2,
+      -1
+    ]
+  },
+  "BlockType": {
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Resources/Plants/Petal.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "Resources/Plants/Plant_Petals_Glitch.png",
+        "Weight": 1
+      }
+    ],
+    "BlockSoundSetId": "Seeds",
+    "Flags": {
+      "IsStackable": false
+    },
+    "RandomRotation": "YawStep1",
+    "Gathering": {
+      "Soft": {}
+    },
+    "Material": "Empty",
+    "HitboxType": "Plant_Seed",
+    "BlockParticleSetId": "Dust",
+    "CustomModelScale": 1,
+    "ParticleColor": "#ff9df7"
+  },
+  "PlayerAnimationsId": "Item",
+  "Tags": {
+    "Type": [
+      "Plant"
+    ],
+    "Family": [
+      "Petals"
+    ]
+  },
+  "ItemEntity": {
+    "ParticleSystemId": null
+  },
+  "ItemSoundSetId": "ISS_Items_Foliage"
+}
