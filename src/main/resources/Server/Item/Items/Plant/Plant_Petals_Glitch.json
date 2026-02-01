@@ -38,7 +38,7 @@
     "HitboxType": "Plant_Seed",
     "BlockParticleSetId": "Dust",
     "CustomModelScale": 1,
-    "ParticleColor": "#ff9df7"
+    "ParticleColor": "#ff00dc"
   },
   "PlayerAnimationsId": "Item",
   "Tags": {
@@ -52,5 +52,6 @@
   "ItemEntity": {
     "ParticleSystemId": null
   },
-  "ItemSoundSetId": "ISS_Items_Foliage"
+  "ItemSoundSetId": "ISS_Items_Foliage",
+  "Quality": "Common"
 }

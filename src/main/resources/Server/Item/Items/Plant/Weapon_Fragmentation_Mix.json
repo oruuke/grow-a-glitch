@@ -157,7 +157,7 @@
     "BlockParticleSetId": "Dust",
     "BlockSoundSetId": "Seeds",
     "CustomModelScale": 0.9,
-    "ParticleColor": "#aa946e",
+    "ParticleColor": "#ff00dc",
     "BlockEntity": {
       "Components": {
         "FarmingBlock": {}
@@ -170,17 +170,17 @@
   ],
   "IconProperties": {
     "Scale": 1.115,
-    "Translation": [
-      1.2,
-      -4.2
-    ],
     "Rotation": [
       22.5,
       45,
       22.5
+    ],
+    "Translation": [
+      1.2,
+      -4.2
     ]
   },
-  "Icon": "Icons/ItemsGenerated/Plant_Crop_Lettuce_Block.png",
+  "Icon": "Icons/ItemsGenerated/Weapon_Fragmentation_Mix.png",
   "Tags": {
     "Type": [
       "Plant"
@@ -210,5 +210,6 @@
       }
     ],
     "TimeSeconds": 0.01
-  }
+  },
+  "Quality": "Rare"
 }

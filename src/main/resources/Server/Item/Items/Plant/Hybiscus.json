@@ -17,20 +17,20 @@
         "DropList": "Drops_Plant_Crop_Hybiscus_StageFinal_Harvest"
       }
     },
-    "ParticleColor": "#f200ff",
+    "ParticleColor": "#ff00dc",
     "InteractionHint": "Press {key} to pick up Hybiscus"
   },
-  "Icon": "Icons/ItemsGenerated/Plant_Flower_Common_Blue.png",
+  "Icon": "Icons/ItemsGenerated/Hybiscus.png",
   "IconProperties": {
     "Scale": 0.685,
-    "Translation": [
-      0,
-      -14.3
-    ],
     "Rotation": [
       0,
       103.685,
       18.185
+    ],
+    "Translation": [
+      0,
+      -14.3
     ]
   }
 }
