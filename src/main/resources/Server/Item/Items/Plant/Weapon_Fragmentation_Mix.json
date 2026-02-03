@@ -27,35 +27,27 @@
           "CustomModel": "Blocks/Foliage/Plants/Cross_17px.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "Blocks/Foliage/Plants/Cross_10px_Textures/Grass_Sharp_Short_GS.png",
+              "Texture": "Resources/Plants/Stages/Wep_Frag_S1_Texture.png",
               "Weight": 1
             }
           ],
-          "HitboxType": "Plant_Small",
-          "Effect": [
-            "WindAttached"
-          ],
-          "BiomeTint": 100
+          "HitboxType": "Plant_Small"
         },
         "Stage2": {
           "CustomModel": "Blocks/Foliage/Grass/Dense_Tall_3Rows.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "Blocks/Foliage/Grass/Dense_Tall_4Rows_Texture.png",
+              "Texture": "Resources/Plants/Stages/Wep_Frag_S2_Texture.png",
               "Weight": 1
             }
           ],
-          "HitboxType": "Plant_Small",
-          "Effect": [
-            "WindAttached"
-          ],
-          "BiomeTint": 100
+          "HitboxType": "Plant_Small"
         },
         "Stage3": {
           "CustomModel": "Blocks/Foliage/Grass/Dense_VeryTall_4Rows.blockymodel",
           "CustomModelTexture": [
             {
-              "Texture": "Blocks/Foliage/Grass/Dense_VeryTall_4Rows_Sharp.png",
+              "Texture": "Resources/Plants/Stages/Wep_Frag_S3_Texture.png",
               "Weight": 1
             }
           ],
@@ -74,11 +66,7 @@
             }
           },
           "HitboxType": "Plant_Small",
-          "Effect": [
-            "WindAttached"
-          ],
-          "BiomeTint": 100,
-          "InteractionHint": "Press {key} to pick up Hybiscus"
+          "InteractionHint": "Press {key} to harvest Glitchblade"
         }
       }
     },
@@ -202,11 +190,10 @@
     "BenchRequirement": [
       {
         "Type": "Crafting",
-        "Id": "Weapon_Bench",
+        "Id": "Farmingbench",
         "Categories": [
-          "Weapon_Sword"
-        ],
-        "RequiredTierLevel": 3
+          "Seeds"
+        ]
       }
     ],
     "TimeSeconds": 0.01

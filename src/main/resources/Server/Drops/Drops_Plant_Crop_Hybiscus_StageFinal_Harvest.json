@@ -5,6 +5,12 @@
       {
         "Type": "Single",
         "Item": {
+          "ItemId": "Plant_Petals_Blue"
+        }
+      },
+      {
+        "Type": "Single",
+        "Item": {
           "ItemId": "Plant_Petals_Glitch"
         }
       },

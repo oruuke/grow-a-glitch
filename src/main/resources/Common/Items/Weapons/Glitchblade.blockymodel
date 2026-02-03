@@ -64,21 +64,21 @@
                   "orientation": {"x": -0.5, "y": -0.5, "z": 0.5, "w": 0.5},
                   "shape": {
                     "type": "box",
-                    "offset": {"x": -4, "y": 0, "z": 0},
+                    "offset": {"x": -10.5, "y": 0, "z": 0},
                     "stretch": {"x": 1, "y": 1, "z": 1},
                     "settings": {
                       "isPiece": false,
-                      "size": {"x": 25, "y": 5, "z": 5}
+                      "size": {"x": 12, "y": 5, "z": 5}
                     },
                     "textureLayout": {
                       "back": {
-                        "offset": {"x": 29, "y": 14},
+                        "offset": {"x": 16, "y": 14},
                         "mirror": {"x": true, "y": false},
                         "angle": 0
                       },
                       "front": {
-                        "offset": {"x": 4, "y": 14},
-                        "mirror": {"x": false, "y": false},
+                        "offset": {"x": 4, "y": 19},
+                        "mirror": {"x": false, "y": true},
                         "angle": 0
                       },
                       "top": {
@@ -100,8 +100,50 @@
                   "children": [
                     {
                       "id": "5",
+                      "name": "Handle--C1",
+                      "position": {"x": 6.5, "y": 0, "z": 0},
+                      "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
+                      "shape": {
+                        "type": "box",
+                        "offset": {"x": 6, "y": 0, "z": 0},
+                        "stretch": {"x": 1, "y": 1, "z": 1},
+                        "settings": {
+                          "isPiece": false,
+                          "size": {"x": 13, "y": 5, "z": 5},
+                          "isStaticBox": true
+                        },
+                        "textureLayout": {
+                          "back": {
+                            "offset": {"x": 29, "y": 14},
+                            "mirror": {"x": true, "y": false},
+                            "angle": 0
+                          },
+                          "front": {
+                            "offset": {"x": 16, "y": 19},
+                            "mirror": {"x": false, "y": true},
+                            "angle": 0
+                          },
+                          "top": {
+                            "offset": {"x": 16, "y": 14},
+                            "mirror": {"x": false, "y": false},
+                            "angle": 0
+                          },
+                          "bottom": {
+                            "offset": {"x": 16, "y": 14},
+                            "mirror": {"x": false, "y": false},
+                            "angle": 0
+                          }
+                        },
+                        "unwrapMode": "custom",
+                        "visible": true,
+                        "doubleSided": false,
+                        "shadingMode": "flat"
+                      }
+                    },
+                    {
+                      "id": "6",
                       "name": "Handle2",
-                      "position": {"x": 14, "y": 0, "z": 0},
+                      "position": {"x": 20.5, "y": 0, "z": 0},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -129,8 +171,8 @@
                           },
                           "left": {
                             "offset": {"x": 14, "y": 0},
-                            "mirror": {"x": false, "y": false},
-                            "angle": 90
+                            "mirror": {"x": true, "y": true},
+                            "angle": 270
                           },
                           "top": {
                             "offset": {"x": 29, "y": 2},
@@ -150,9 +192,9 @@
                       }
                     },
                     {
-                      "id": "6",
+                      "id": "7",
                       "name": "Pommel",
-                      "position": {"x": -14.00001, "y": 0, "z": 0.00001},
+                      "position": {"x": -7.50001, "y": 0, "z": 0.00001},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -201,9 +243,9 @@
                       }
                     },
                     {
-                      "id": "7",
+                      "id": "8",
                       "name": "Sword Base",
-                      "position": {"x": 29, "y": 0, "z": -0.00001},
+                      "position": {"x": 35.5, "y": 0, "z": -0.00001},
                       "orientation": {"x": 0, "y": 0, "z": 0, "w": 1},
                       "shape": {
                         "type": "box",
@@ -242,7 +284,7 @@
                       },
                       "children": [
                         {
-                          "id": "8",
+                          "id": "9",
                           "name": "Sword Wide--C1",
                           "position": {"x": -10, "y": -3, "z": -4.99999},
                           "orientation": {"x": 0.70711, "y": 0, "z": 0, "w": 0.70711},
@@ -270,7 +312,7 @@
                           }
                         },
                         {
-                          "id": "9",
+                          "id": "10",
                           "name": "Sword Base--C2",
                           "position": {"x": 36.11728, "y": -7.31207, "z": 0},
                           "orientation": {"x": 0, "y": 0, "z": 0.01309, "w": 0.99991},
@@ -298,7 +340,7 @@
                           }
                         },
                         {
-                          "id": "10",
+                          "id": "11",
                           "name": "Sword Base",
                           "position": {"x": 15, "y": 0.25, "z": 0},
                           "orientation": {"x": 0, "y": 0, "z": 0.05061, "w": 0.99872},
@@ -339,7 +381,7 @@
                           },
                           "children": [
                             {
-                              "id": "11",
+                              "id": "12",
                               "name": "Sword Wide--C1",
                               "position": {"x": -9.5, "y": 0.5, "z": -0.99999},
                               "orientation": {"x": -0.70711, "y": 0, "z": 0, "w": 0.70711},
@@ -367,7 +409,7 @@
                               }
                             },
                             {
-                              "id": "12",
+                              "id": "13",
                               "name": "Sword Base--C2",
                               "position": {"x": 10.11728, "y": -7.56207, "z": 0},
                               "orientation": {"x": 0, "y": 0, "z": 0.01309, "w": 0.99991},
@@ -395,7 +437,7 @@
                               }
                             },
                             {
-                              "id": "13",
+                              "id": "14",
                               "name": "Sword Base",
                               "position": {"x": 13.11728, "y": -0.06207, "z": 0},
                               "orientation": {"x": 0, "y": 0, "z": 0.08634, "w": 0.99627},
@@ -424,7 +466,7 @@
                           ]
                         },
                         {
-                          "id": "14",
+                          "id": "15",
                           "name": "cube--C3",
                           "position": {"x": -10, "y": -6, "z": 0.00001},
                           "orientation": {"x": -0.70711, "y": 0, "z": 0, "w": 0.70711},
@@ -452,7 +494,7 @@
                           }
                         },
                         {
-                          "id": "15",
+                          "id": "16",
                           "name": "cube--C4",
                           "position": {"x": 12, "y": -6, "z": 0.00001},
                           "orientation": {"x": -0.70559, "y": -0.04625, "z": 0.04625, "w": 0.70559},

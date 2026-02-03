@@ -3,7 +3,7 @@
     "Name": "server.items.Plant_Petals_Glitch.name",
     "Description": "server.items.Plant_Petals_Glitch.description"
   },
-  "Icon": "Icons/ItemsGenerated/Plant_Petals_Pink.png",
+  "Icon": "Icons/ItemsGenerated/Plant_Petals_Glitch.png",
   "IconProperties": {
     "Scale": 0.8,
     "Rotation": [
@@ -13,7 +13,7 @@
     ],
     "Translation": [
       2,
-      -1
+      -3
     ]
   },
   "BlockType": {

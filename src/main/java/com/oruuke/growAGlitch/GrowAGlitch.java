@@ -1,20 +1,21 @@
 package com.oruuke.growAGlitch;
 
-import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
+import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Interaction;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
-import com.oruuke.growAGlitch.commands.ExampleCommand;
+import com.oruuke.growAGlitch.events.JoinEvent;
+import com.oruuke.growAGlitch.interactions.GlitchInteraction;
 
 public class GrowAGlitch extends JavaPlugin {
-    private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
-
     public GrowAGlitch(JavaPluginInit init) {
         super(init);
-        LOGGER.atInfo().log("Hello from %s version %s", this.getName(), this.getManifest().getVersion().toString());
     }
 
     @Override
     protected void setup() {
-        this.getCommandRegistry().registerCommand(new ExampleCommand(this.getName(), this.getManifest().getVersion().toString()));
+//        Register custom interaction with unique ID
+        this.getEventRegistry().registerGlobal(PlayerReadyEvent.class, JoinEvent::onPlayerReady);
+        this.getCodecRegistry(Interaction.CODEC).register("Glitch_Interaction", GlitchInteraction.class, GlitchInteraction.CODEC);
     }
 }

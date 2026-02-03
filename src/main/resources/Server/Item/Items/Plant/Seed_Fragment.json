@@ -4,8 +4,7 @@
     "Description": "server.items.Seed_Fragment.description"
   },
   "Interactions": {
-    "Primary": "Block_Primary",
-    "Secondary": "Block_Secondary"
+    "Primary": "Block_Primary"
   },
   "BlockType": {
     "DrawType": "Model",
