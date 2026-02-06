@@ -1,9 +1,7 @@
-package com.oruuke.growAGlitch.interactions;
+package com.oruuke.growAGlitch;
 
-import java.util.List;
-
-public class LivingEntities {
-    public static final List<String> ENTITIES = List.of(
+public class RandomEntities {
+    public static final String[] ENTITIES = {
             "Antelope",
             "Archaeopteryx",
             "Armadillo",
@@ -330,5 +328,5 @@ public class LivingEntities {
             "Zombie_Frost",
             "Zombie_Sand",
             "Zombie_Werewolf"
-    );
+    };
 }

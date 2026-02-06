@@ -13,7 +13,10 @@ import com.hypixel.hytale.server.core.modules.interaction.interaction.config.Sim
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.npc.INonPlayerCharacter;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import com.hypixel.hytale.server.core.util.Config;
 import com.hypixel.hytale.server.npc.NPCPlugin;
+import com.oruuke.growAGlitch.GlitchConfig;
+import com.oruuke.growAGlitch.GrowAGlitch;
 import it.unimi.dsi.fastutil.Pair;
 
 import javax.annotation.Nonnull;
@@ -57,27 +60,41 @@ public class GlitchInteraction extends SimpleInstantInteraction {
             return;
         }
 
+//        Get all available entities via config registry
+        Config<GlitchConfig> config = GrowAGlitch.getConfigRegistry();
+        assert config != null;
+        GlitchConfig glitchConfig = config.get();
+        String[] randomEntities = glitchConfig.getRandomEntities();
+
+//        Required random entities config for glitch
+        if (randomEntities.length < 1) {
+            interactionContext.getState().state = InteractionState.Failed;
+            LOGGER.atInfo().log("No entities found for glitch interaction");
+            return;
+        }
+
 //        Random asset picker
         Random randomPick = new Random();
-        int i = randomPick.nextInt(LivingEntities.ENTITIES.size());
-        String entity = LivingEntities.ENTITIES.get(i);
+        int i = randomPick.nextInt(randomEntities.length);
+        String newEntityId = randomEntities[i];
 
+//        Target data for replacing
         Ref<EntityStore> targetRef = interactionContext.getTargetEntity();
         assert targetRef != null;
         TransformComponent transform = store.getComponent(targetRef, EntityModule.get().getTransformComponentType());
         assert transform != null;
 
         world.execute(() -> {
-            // Use the NPCPlugin helper to spawn the NPC.
-            Pair<Ref<EntityStore>, INonPlayerCharacter> result = NPCPlugin.get().spawnNPC(store, entity, null,
+//            Spawn new entity
+            Pair<Ref<EntityStore>, INonPlayerCharacter> result = NPCPlugin.get().spawnNPC(store, newEntityId, null,
                     transform.getPosition(), transform.getRotation());
             if (result != null) {
-                // Successfully spawned
+//                Double check new entity exists
                 Ref<EntityStore> npcRef = result.first();
-                // Retrieve the NPC interface if needed for further interaction
-                INonPlayerCharacter npc = result.second();
-                if (npcRef != null && npc != null) {
+                INonPlayerCharacter npcInterface = result.second();
+                if (npcRef != null && npcInterface != null) {
                     store.removeEntity(targetRef, RemoveReason.REMOVE);
+                    LOGGER.atInfo().log("Swapped: " + targetRef.getClass().getName() + " ...for: " + newEntityId);
                 }
             }
         });
