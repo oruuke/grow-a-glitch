@@ -24,7 +24,7 @@ public class GlitchConfig {
     public String[] getRandomEntities() {
         return randomEntities;
     }
-    public void setRandomEntities(String[] randomEntities) {
-        this.randomEntities = randomEntities;
-    }
+//    public void setRandomEntities(String[] randomEntities) {
+//        this.randomEntities = randomEntities;
+//    }
 }

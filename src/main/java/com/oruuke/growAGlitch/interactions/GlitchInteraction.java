@@ -15,11 +15,13 @@ import com.hypixel.hytale.server.core.universe.world.npc.INonPlayerCharacter;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
 import com.hypixel.hytale.server.core.util.Config;
 import com.hypixel.hytale.server.npc.NPCPlugin;
+import com.hypixel.hytale.server.npc.entities.NPCEntity;
 import com.oruuke.growAGlitch.GlitchConfig;
 import com.oruuke.growAGlitch.GrowAGlitch;
 import it.unimi.dsi.fastutil.Pair;
 
 import javax.annotation.Nonnull;
+import java.util.Objects;
 import java.util.Random;
 
 public class GlitchInteraction extends SimpleInstantInteraction {
@@ -92,7 +94,8 @@ public class GlitchInteraction extends SimpleInstantInteraction {
 //                Double check new entity exists
                 Ref<EntityStore> npcRef = result.first();
                 INonPlayerCharacter npcInterface = result.second();
-                if (npcRef != null && npcInterface != null) {
+                NPCEntity npcComponent = store.getComponent(npcRef, Objects.requireNonNull(NPCEntity.getComponentType()));
+                if (npcInterface != null && npcComponent != null) {
                     store.removeEntity(targetRef, RemoveReason.REMOVE);
                     LOGGER.atInfo().log("Swapped: " + targetRef.getClass().getName() + " ...for: " + newEntityId);
                 }
